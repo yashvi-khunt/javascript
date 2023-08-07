@@ -26,6 +26,24 @@ function checkWinner(avgDolphins,avgKoalas){
 
 //coding challenge 2
 
+
+
+const bills = [125,555,44];
+let totals = new Array();
+let tips = new Array();
+
+const calcTip = (bill) => {
+    const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    tips.push(tip);
+    totals.push(bill+tip);
+}
 function cc2(){
-    console.log("cc2")
+    // for(let i = 0; i<bills.length; i++){
+    //     calcTip(bills[i]);
+    // }
+    bills.forEach(bill => calcTip(bill) )
+       
+    console.log(bills)
+    console.log(tips)
+    console.log(totals)
 }
