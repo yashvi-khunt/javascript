@@ -21,13 +21,9 @@ function checkWinner(avgDolphins,avgKoalas){
         console.log("No team wins");
     }
 }
-
 // coding challenge 1
 
 //coding challenge 2
-
-
-
 const bills = [125,555,44];
 let totals = new Array();
 let tips = new Array();
@@ -46,4 +42,37 @@ function cc2(){
     console.log(bills)
     console.log(tips)
     console.log(totals)
+}
+//coding challenge 3
+const mark = {
+    firstName: "Mark",
+    lastName: "Miller",
+    weigth: 78,
+    height: 1.69,
+    calcBMI: function(){
+        this.bmi = this.weigth / this.height**2;
+        return this.bmi;
+    }
+}
+
+const john = {
+    firstName: "John",
+    lastName: "Smith",
+    weigth: 92,
+    height: 1.95,
+    calcBMI: function(){
+        this.bmi = this.weigth / this.height**2;
+        return this.bmi
+    }
+}
+
+const cc3 = () => {
+    mark.calcBMI()
+    john.calcBMI();
+    if(mark.bmi > john.bmi){
+        console.log(`${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi}) is higher than ${john.firstName} ${john.lastName}'s (${john.bmi})`);
+    }else{
+        console.log(`${john.firstName} ${john.lastName}'s BMI (${john.bmi}) is higher than ${mark.firstName} ${mark.lastName}'s (${mark.bmi})`);
+    }
+
 }
